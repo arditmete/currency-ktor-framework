@@ -6,7 +6,7 @@ open class Validator {
             throw ValidatorException("Wrong `from` parameter: `$fromCurrency`")
         }
 
-        if (toCurrency == null || !correctCurrencies.contains(toCurrency) || toCurrency.length != 3 ) {
+        if (toCurrency == null || !correctCurrencies.contains(toCurrency) || toCurrency.length != 3) {
             throw ValidatorException("Wrong `to` parameter: `$toCurrency`")
         }
     }

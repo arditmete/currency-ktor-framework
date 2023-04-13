@@ -15,7 +15,8 @@ class CurrencyControllerTest {
     var jedis: Jedis = Jedis("localhost", 6379)
 
     @Mock
-    var converterService: ConverterService = ConverterService(jedis = jedis,
+    var converterService: ConverterService = ConverterService(
+        jedis = jedis,
         config = Config("Ja28GjJrGIIcwXs9jGAEkwdMJJdeyjaX", "https://api.apilayer.com/currency_data/live?")
     )
 

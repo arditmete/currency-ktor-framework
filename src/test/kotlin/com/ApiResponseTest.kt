@@ -6,7 +6,8 @@ import kotlin.test.assertEquals
 class ApiResponseTest {
     @Test
     fun testApiResponseDeserialization() {
-        val jsonString = "{\"quotes\":{\"USDINR\":73.702504},\"source\":\"USD\",\"success\":true,\"timestamp\":1649899200}"
+        val jsonString =
+            "{\"quotes\":{\"USDINR\":73.702504},\"source\":\"USD\",\"success\":true,\"timestamp\":1649899200}"
         val gson = Gson()
         val apiResponse = gson.fromJson(jsonString, ApiResponse::class.java)
         assertEquals(mapOf("USDINR" to 73.702504), apiResponse.quotes)

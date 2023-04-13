@@ -7,6 +7,6 @@ import routes.convertFromTo
 
 fun Application.routing(dependencies: Dependencies) {
     routing {
-       convertFromTo(dependencies.currencyController, dependencies.converterService)
+        convertFromTo(dependencies.currencyController, dependencies.converterService)
     }
 }

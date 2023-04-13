@@ -1,4 +1,3 @@
-
 plugins {
     kotlin("jvm") version "1.5.30"
     id("org.jetbrains.kotlin.plugin.allopen") version "1.5.31"
@@ -42,10 +41,10 @@ dependencies {
     implementation("junit:junit:4.13.1")
     implementation("org.json:json:20210307")
     implementation("com.google.guava:guava:11.0.2")
-    implementation ("redis.clients:jedis:3.4.0")
-    implementation ("io.insert-koin:koin-core:$koin_version")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
-    implementation ("org.jobrunr:jobrunr:6.1.1")
+    implementation("redis.clients:jedis:3.4.0")
+    implementation("io.insert-koin:koin-core:$koin_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation("org.jobrunr:jobrunr:6.1.1")
     testImplementation("org.mockito:mockito-core:2.1.0")
     testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
     testImplementation("io.ktor:ktor-server-test-host:$ktor_version")

@@ -65,7 +65,7 @@ open class ConverterService(
 
     }
 
-     suspend fun getAsJson(url: String, currency: String) {
+    suspend fun getAsJson(url: String, currency: String) {
         try {
             val httpResponse: HttpResponse = httpClient.get(url) {
                 headers {
@@ -86,12 +86,12 @@ open class ConverterService(
         return amount.toBigDecimal().multiply(currencyConversion?.value?.toBigDecimal())
     }
 
-    fun validateParams(params: Parameters) {
+    fun validateParams(params: Map<String, List<String>>) {
         if (params["from"] == null) {
             throw ValidatorException("Field from is missing!")
-        } else if (params.get("to") == null) {
+        } else if (params["to"] == null) {
             throw ValidatorException("Field to is missing!")
-        } else if (params.get("amount") == null) {
+        } else if (params["amount"] == null) {
             throw ValidatorException("Field amount is missing!")
         }
     }
